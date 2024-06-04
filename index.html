@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOTHS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1320px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            border-radius: 30px 30px 0 0;
+            overflow: hidden;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 52px;
+        }
+
+        .card {
+            overflow: hidden;
+        }
+
+        .card-photo:hover .shop-btn {
+            transform: translateY(-25px);
+            opacity: 1;
+        }
+
+
+        .card-photo {
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 500;
+        }
+
+        .shop-btn {
+            width: 150px;
+            height: 40px;
+            transform: translatey(50px);
+            transition: all 0.5s;
+            opacity: 0;
+        }
+
+        .shop-btn:hover {
+            letter-spacing: 1px;
+        }
+
+        .cart-btn {
+            bottom: 0;
+            right: 0;
+            position: fixed;
+            margin: 30px;
+            width: 70px;
+
+            height: 70px;
+            text-align: center;
+            border-radius: 100%;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a class="cart-btn" href="cart.html">
+        cart
+    </a>
+
+    <h1>
+        products
+    </h1>
+
+
+    <section class="products">
+        <div class="container">
+            <h2 style="text-align: center; margin: 30px 0; font-size: 50px;">shoes</h2>
+            <hr style="margin: 30px 0 ;">
+            <div class="row">
+
+
+
+                <div class="card" id="products">
+                    <div class="card-photo">
+                        <img src="https://trackstore.qodeinteractive.com/wp-content/uploads/2017/10/simpe-shop-2.jpg"
+                            alt="">
+
+                        <div class="card-content" style="display: flex;">
+                            <button class="shop-btn" style="background-color: #000; color: #fff; border: 0;">add to
+                                cart</button>
+                            <button class="shop-btn">add to wishlist</button>
+                        </div>
+                        <div class="card-contain" style="display: flex; justify-content: space-between;">
+                            <h4 style="font-size: 18px;">
+                                new shoes for exersize
+                            </h4>
+                            <span style="color: #272727;">
+                                499 /-
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+        let products = [
+
+            {
+                id: 1,
+                name: "shoes",
+                price: 499,
+                Image: url('https://trackstore.qodeinteractive.com/wp-content/uploads/2017/10/simpe-shop-2.jpg')
+            },
+
+            {
+                id: 2,
+                name: "jecket",
+                price: 799,
+                Image: url('https://trackstore.qodeinteractive.com/wp-content/uploads/2017/10/simpe-shop-1.jpg')
+            },
+            {
+                id: 3,
+                name: "dark shoes",
+                price: 1500,
+                Image: url('https://trackstore.qodeinteractive.com/wp-content/uploads/2017/10/simpe-shop-6.jpg')
+            },
+            {
+                id: 4,
+                name: "blue shoes",
+                price: 599,
+                Image: url('https://trackstore.qodeinteractive.com/wp-content/uploads/2017/10/simpe-shop-4.jpg')
+            },
+            {
+                id: 5,
+                name: "light gyay hoodie",
+                price: 1199,
+                Image: url('https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg?auto=compress&cs=tinysrgb&w=600')
+            },
+
+            {
+                id: 6,
+                name: "couple hoodies",
+                price: 2199,
+                Image: url('https://images.pexels.com/photos/19461583/pexels-photo-19461583/free-photo-of-studio-shot-of-man-and-woman-in-hoodies.jpeg?auto=compress&cs=tinysrgb&w=600')
+            },
+            {
+                id: 7,
+                name: "asthetic over size shirt",
+                price: 539,
+                Image: url('https://images.pexels.com/photos/9969430/pexels-photo-9969430.jpeg?auto=compress&cs=tinysrgb&w=600')
+            },
+
+            {
+                id: 8,
+                name: "shirts for womans",
+                price: 799,
+                Image: url('https://images.pexels.com/photos/7752843/pexels-photo-7752843.jpeg?auto=compress&cs=tinysrgb&w=600')
+            },
+            {
+                id: 9,
+                name: "simple t-shirts for womans",
+                price: 999,
+                Image: url('https://images.pexels.com/photos/5121738/pexels-photo-5121738.jpeg?auto=compress&cs=tinysrgb&w=600')
+            },
+            {
+                id: 10,
+                name: "plain shirts for mans",
+                price: 799,
+                Image: url('https://images.pexels.com/photos/7752813/pexels-photo-7752813.jpeg?auto=compress&cs=tinysrgb&w=600')
+            },
+            {
+                id: 11,
+                name: "formal shirts mans",
+                price: 499,
+                Image: url('https://images.pexels.com/photos/7752816/pexels-photo-7752816.jpeg?auto=compress&cs=tinysrgb&w=600')
+            },
+            {
+                id: 12,
+                name: "white top for women",
+                price: 139,
+                Image: url('https://images.pexels.com/photos/20144196/pexels-photo-20144196/free-photo-of-woman-o-preppy-short-sleeved-shirt.jpeg?auto=compress&cs=tinysrgb&w=600')
+            },
+
+            {
+                id: 13,
+                name: "LIGHT YELLOW TOP",
+                price: 449,
+                Image: url('https://images.pexels.com/photos/16946579/pexels-photo-16946579/free-photo-of-woman-posing-in-shirt.jpeg?auto=compress&cs=tinysrgb&w=600')
+            },
+            {
+                id: 14,
+                name: "red shirts fro womens",
+                price: 759,
+                Image: url('https://images.pexels.com/photos/1698495/pexels-photo-1698495.jpeg?auto=compress&cs=tinysrgb&w=600')
+            },
+            {
+                id: 15,
+                name: "matching red tops for womans",
+                price: 1699,
+                Image: url('https://images.pexels.com/photos/13871784/pexels-photo-13871784.jpeg?auto=compress&cs=tinysrgb&w=600')
+            }
+
+        ]
+
+        let tbl = "";
+
+        products.map((p) => {
+
+            tbl +=
+
+                `
+                <div class="card-photo">
+                    <img src="https://trackstore.qodeinteractive.com/wp-content/uploads/2017/10/simpe-shop-2.jpg" alt="">
+                
+                <div class="card-content" style="display: flex;">
+                    <button class="shop-btn" style="background-color: #000; color: #fff; border: 0;">add to cart</button>
+                    <button class="shop-btn">add to wishlist</button>
+                </div>
+                <div class="card-contain" style="display: flex; justify-content: space-between;">
+                    <h4 style="font-size: 18px;">
+                        new shoes for exersize
+                    </h4>
+                    <span style="color: #272727;">
+                        499 /- 
+                    </span>
+                </div>
+            </div>
+            `
+
+        });
+
+        document.getElementById("products").innerHTML = tbl;
+
+
+    </script>
+</body>
+
+</html>
